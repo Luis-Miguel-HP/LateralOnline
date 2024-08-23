@@ -1,0 +1,440 @@
+/* Reseteo de márgenes, rellenos y tipografía global */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Encabezado */
+header {
+    background-color: #e0e5ee;
+    padding: 20px 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+      margin-bottom: 5px;
+}
+
+.logo img {
+    max-width: 10%;
+    height: auto;
+}
+
+/* Separador */
+hr {
+    margin: 10px auto;
+    width: 80%;
+    border: 1px solid #ccc;
+}
+
+/* Navegación principal */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333; /* Fondo oscuro para la barra de navegación */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    color: #fff; /* Texto blanco para contraste */
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: color 0.3s, transform 0.3s;
+    padding: 5px 10px; /* Espaciado adicional para mejor interacción */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.todos:hover {
+    color: rgba(255, 255, 255, 0.7); /* Color blanco semitransparente al hover */
+    transform: scale(1.05);
+    /* background-color: rgba(255, 255, 255, 0.1); Fondo claro al hover */
+}
+
+.Destacados:hover {
+    color: gold;
+    transform: scale(1.05);
+    /* background-color: rgba(255, 223, 0, 0.1); Fondo dorado al hover */
+}
+
+.reciente:hover {
+    color: lightgreen;
+    transform: scale(1.05);
+    /* background-color: rgba(144, 238, 144, 0.1); Fondo verde claro al hover */
+}
+
+.oferta:hover {
+    color: red;
+    transform: scale(1.05);
+    /* background-color: rgba(255, 0, 0, 0.1); Fondo rojo claro al hover */
+}
+
+/* Título de secciones */
+h2 {
+    font-size: 2em;
+    margin: 10px 0;
+    text-align: center;
+    text-decoration: underline;
+}
+
+/* Sección de categorías */
+.categorias {
+    background-color: #f4f4f9;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+.categorias ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0;
+}
+
+.categorias ul li {
+    list-style: none;
+}
+
+.categorias ul li a {
+    margin: 0 20px;
+    color: #333;
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s, text-decoration 0.3s;
+}
+
+.categorias ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Catálogo de productos */
+.catalogo {
+
+    /* Utilizando Flex */
+
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box; */
+
+
+    /* Utilizando grid */
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+/* Ajuste del cuadro de productos */
+.producto {
+    display: flex;
+    justify-content: center;
+    
+    width: 200px; /* Tamaño más grande para todos los productos */
+    height: 250px; /* Altura fija para el cuadro del producto */
+    box-sizing: border-box;
+    text-align: center;
+
+    margin: 10px ;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+
+/* Ajuste de las imágenes de productos */
+.producto img {
+    max-width: 100%;
+    max-height: 150px; /* Altura máxima ajustada para las imágenes */
+    object-fit: contain;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+.producto figcaption {
+    font-size: 18px; /* Tamaño de fuente del título */
+    font-weight: bold; /* Negrita para el título */
+    color: #333; /* Color del texto */
+    margin: 10px; /* Espaciado alrededor del título */
+    padding: 20px; /* Espaciado interno del título */
+    /* border-bottom: 2px solid black; Línea debajo del título */
+    justify-content: center;
+   
+  
+}
+
+.producto figcaption:hover {
+    color: #007BFF; /* Color del texto al pasar el cursor */
+    border-color: #007BFF; /* Color del borde al pasar el cursor */
+}
+
+
+/* Botón para acciones (ej. agregar al carrito) */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 1em;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .producto {
+        grid: 1 1 calc(50% - 40px);
+    }
+
+    .categorias ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 1em;
+        margin: 0 10px;
+    }
+
+    .producto {
+        grid: 1 1 100%;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Ejemplo de CSS para diferenciar secciones */
+.catalogo h3 {
+    margin-top: 20px;
+}
+
+.destacado {
+    border-color: gold; /* Ejemplo: borde dorado para destacados */
+}
+
+.oferta {
+    border-color:   red; Ejemplo: borde rojo para ofertas
+  
+}
+
+.reciente {
+    border-color: green; /* Ejemplo: borde verde para recientemente agregados */
+}
+/* Ajustes generales para productos */
+.producto {
+    position: relative;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .producto img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Estilos para la descripción y el botón de compra */
+  .descripcion-general {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+  }
+  
+  .producto:hover .descripcion-general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .comprar {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  s
+  .comprar:hover {
+    background-color: #45a049;
+  }
+
+/* Estilos para la descripción y el botón de compra */
+.descripcion-general {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .producto:hover .descripcion-general {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .comprar {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .comprar:hover {
+    background-color: #45a049;
+  }
+  /* Estilos para el modal */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    padding-top: 60px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+    background-color: transparent;
+  }
+  
+  .modal-content {
+
+    margin: 5% auto; 
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 25px;
+    width: 32%;
+    height: 55%;    
+    text-align: center;
+    font-size: medium; 
+    background-color: whitesmoke;
+    
+  }
+  
+  .close {
+    color: #aaa;        
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+ /* Estilo para centrar y ajustar el tamaño de los labels */
+label {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: larger;
+    margin-bottom: 10px; /* Añadido para separar los labels de los inputs */
+  }
+  
+  /* Estilo para hacer que todos los inputs tengan el mismo tamaño */
+  input {
+    border: 1px solid black;
+    text-align: center;
+    display: block;
+    margin: 0 auto 10px auto; /* Centramos el input y añadimos espacio inferior */
+    width: 50%; /* Puedes ajustar el tamaño según sea necesario */
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */
+    padding: 10px; /* Añade un padding para una mejor apariencia */
+  }
+  
+
+
+    
+  input[type="submit"] {
+    width: auto; /* El botón de submit no necesariamente tiene que ser tan ancho */
+    padding: 10px 20px; /* Ajusta el padding para un mejor look del botón */
+    cursor: pointer; /* Cambia el cursor cuando se pasa por encima */
+    display: block;
+    margin: 5px auto 0 auto; /* Centrar el botón y añadir margen superior */
+    background-color: #4CAF50; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Quitar el borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: larger; /* Tamaño de fuente más grande */
+  }
+
+  input[type="submit"]:hover{
+    transform: scale(1.02);
+
+    
+  }
+
+fieldset{
+    width: 90%;
+    /* border: 1px solid black; */
+}
+
+legend{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 300%
+
+}

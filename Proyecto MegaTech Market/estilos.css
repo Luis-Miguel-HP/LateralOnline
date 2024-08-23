@@ -1,0 +1,38 @@
+
+.form-1{
+
+    border: 2px solid black;  
+    width: 250px;
+}
+
+
+
+label {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: larger;
+    margin-bottom: 10px; /* Añadido para separar los labels de los inputs */
+  }
+  
+  /* Estilo para hacer que todos los inputs tengan el mismo tamaño */
+  input {
+    border: 1px solid black;
+    text-align: center;
+    display: block;
+    margin: 0 auto 10px auto; /* Centramos el input y añadimos espacio inferior */
+    width: 50%; /* Puedes ajustar el tamaño según sea necesario */
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */
+    padding: 10px; /* Añade un padding para una mejor apariencia */
+  }
+  
+
+input[type="chexbox"]{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: larger;
+    margin-bottom: 10px; /* Añadido para separar los labels de los inputs */
+    
+
+}
