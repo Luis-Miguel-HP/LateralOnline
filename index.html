@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MegaTech Market</title>
+    <meta name="description" content="MegaTech Market: Tienda de tecnología con productos destacados, ofertas y novedades. Compra fácil y rápido." />
+    <meta name="keywords" content="tecnología, pc gamer, laptops, ofertas, tienda online, productos tech" />
+    <meta name="author" content="MegaTech Market" />
+    <link href="Assets/Estilos/Estilos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <div class="contenedor">
+        <div class="logo">
+          <img src="Assets/Imagenes/logo lateral.png" alt="Logo de MegaTech Market" />
+          <hr />
+        </div>
+
+        <section class="Menu-carrito">
+          <div class="imagen-carrito">
+            <img class="carrito" src="Assets/Imagenes/shopping_cart_50dp_1F1F1F_FILL0_wght400_GRAD0_opsz48.png" alt="Icono de carrito de compras" />
+          </div>
+
+          <div id="carrito">
+            <table id="lista-carrito">
+              <thead>
+                <tr>
+                  <th class="tituloth">Imagen</th>
+                  <th class="tituloth">Nombre</th>
+                  <th class="tituloth">Precio</th>
+                  <th class="tituloth">Cantidad</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+
+            <div id="total-carrito"></div>
+            <button id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</button>
+          </div>
+        </section>
+      </div>
+
+      <nav>
+        <a class="todos" href="#" onclick="mostrarCategoria('todos')">Todos</a>
+        <a class="Destacados" href="#" onclick="mostrarCategoria('destacado')">Destacados</a>
+        <a class="oferta" href="#" onclick="mostrarCategoria('oferta')">Ofertas</a>
+        <a class="reciente" href="#" onclick="mostrarCategoria('reciente')">Recientemente Agregados</a>
+      </nav>
+    </header>
+
+    <aside>
+      <h1 class="texto">Nuestros Productos</h1>
+      <div class="catalogo">
+        <figure class="producto destacado">
+          <img src="Assets/Imagenes/pcgamer.jpg" alt="PC Gamer con alto rendimiento" />
+          <figcaption>PC Gamer</figcaption>
+          <div class="Precio">$200.05</div>
+          <div class="descripcion-general">
+            <p>Potente PC Gamer con gráficos de última generación y alta capacidad de almacenamiento.</p>
+            <button class="comprar" data-id="1">Comprar</button>
+          </div>
+        </figure>
+
+        <figure class="producto destacado">
+          <img src="Assets/Imagenes/laptop gamer.webp" alt="Laptop Gamer de alto rendimiento" />
+          <figcaption>Laptop Gamer</figcaption>
+          <div class="Precio">$355.99</div>
+          <div class="descripcion-general">
+            <p>Laptop gamer portátil con procesador de alta velocidad y pantalla HD.</p>
+            <button class="comprar" data-id="2">Comprar</button>
+          </div>
+        </figure>
+
+        <figure class="producto oferta">
+          <img src="Assets/Imagenes/Telefonos.webp" alt="Teléfonos inteligentes modernos" />
+          <figcaption>Teléfonos</figcaption>
+          <div class="Precio">$100.05</div>
+          <div class="descripcion-general">
+            <p>Teléfonos de última generación con cámaras de alta resolución y gran capacidad de batería.</p>
+            <button class="comprar" data-id="3">Comprar</button>
+          </div>
+        </figure>
+
+        <figure class="producto reciente">
+          <img src="Assets/Imagenes/TABLETS.webp" alt="Tablets ligeras y potentes" />
+          <figcaption>Tablets</figcaption>
+          <div class="Precio">$99.05</div>
+          <div class="descripcion-general">
+            <p>Tablets ligeras y versátiles con pantallas de alta definición y gran autonomía.</p>
+            <button class="comprar" data-id="4">Comprar</button>
+          </div>
+        </figure>
+
+        <figure class="producto oferta">
+          <img src="Assets/Imagenes/Tarjetas graficas.jpg" alt="Tarjetas gráficas para gaming y diseño" />
+          <figcaption>Tarjetas Gráficas</figcaption>
+          <div class="Precio">$399.05</div>
+          <div class="descripcion-general">
+            <p>Tarjetas gráficas de alto rendimiento para juegos y diseño gráfico.</p>
+            <button class="comprar" data-id="5">Comprar</button>
+          </div>
+        </figure>
+
+        <figure class="producto reciente">
+          <img src="Assets/Imagenes/headphones.jpg" alt="Cascos con sonido envolvente" />
+          <figcaption>Cascos</figcaption>
+          <div class="Precio">$59.65</div>
+          <div class="descripcion-general">
+            <p>Cascos con sonido envolvente y micrófono integrado para una experiencia de audio inmersiva.</p>
+            <button class="comprar" data-id="6">Comprar</button>
+          </div>
+        </figure>
+
+        <figure class="producto reciente">
+          <img src="Assets/Imagenes/Memoria_Ram.jpg" alt="Memoria RAM de alta velocidad" />
+          <figcaption>Memoria RAM</figcaption>
+          <div class="Precio">$39.59</div>
+          <div class="descripcion-general">
+            <p>Memoria RAM de alta velocidad para mejorar el rendimiento de tu PC.</p>
+            <button class="comprar" data-id="7">Comprar</button>
+          </div>
+        </figure>
+
+        <figure class="producto oferta">
+          <img src="Assets/Imagenes/monitores.jpg" alt="Monitores HD con alta calidad" />
+          <figcaption>Monitores HD</figcaption>
+          <div class="Precio">$200.59</div>
+          <div class="descripcion-general">
+            <p>Monitores HD con excelente calidad de imagen y múltiples entradas de conexión.</p>
+            <button class="comprar" data-id="8">Comprar</button>
+          </div>
+        </figure>
+
+        <figure class="producto oferta">
+          <img src="Assets/Imagenes/tipos_impresoras_multifuncional.png" alt="Impresoras multifuncionales de alta velocidad" />
+          <figcaption>Impresoras Multifuncionales</figcaption>
+          <div class="Precio">$600.59</div>
+          <div class="descripcion-general">
+            <p>Impresoras multifuncionales con capacidad de escaneo, copia e impresión a alta velocidad.</p>
+            <button class="comprar" data-id="9">Comprar</button>
+          </div>
+        </figure>
+      </div>
+    </aside>
+
+    <section>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <form action="https://formsubmit.co/lmhidalgopolanco@gmail.com" method="POST" id="formulario-compra">
+            <legend>Información de Compra</legend>
+            <div class="form-group">
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" name="nombre" required placeholder="Ingrese su nombre" />
+            </div>
+            <div class="form-group">
+              <label for="email">Correo Electrónico:</label>
+              <input type="email" id="email" name="email" required placeholder="Ingrese su correo electrónico" />
+            </div>
+            <div class="form-group">
+              <label for="mensaje">Mensaje:</label>
+              <textarea id="mensaje" name="mensaje" placeholder="Ingrese su mensaje" required></textarea>
+            </div>
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="contenedor-formulario">
+      <div class="floating-icon">
+        <img onclick="irAlFormulario()"src="Assets/Imagenes/formularios-de-google.png" alt="Ícono de formulario de contacto" />
+      </div>
+    </section>
+
+    <footer>
+      <ul class="social-links">
+        <li>
+          <a class="red-social" href="https://www.instagram.com/?hl=es" target="_blank">
+            <img src="Assets/Imagenes/vector-logotipo-instagram_768467-330.avif" alt="Instagram" />
+          </a>
+        </li>
+        <li>
+          <a class="red-social" href="https://www.facebook.com/" target="_blank">
+            <img src="Assets/Imagenes/facebook-logo-facebook-icon-transparent-free-png.webp" alt="Facebook" />
+          </a>
+        </li>
+      </ul>
+      <p>Todos los derechos reservados</p>
+      <p>&copy;1994-2001 MegaTech Market - Lateral S.D</p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
