@@ -1,5 +1,7 @@
 
 # 🛒 MegaTech Market
+vista general del sitio:
+![Vista general](Assets/captures/vista-general.png)
 
 **MegaTech Market** es una tienda en línea enfocada en productos de tecnología. Desde PC gamers y laptops hasta teléfonos, memorias RAM y monitores, este e-commerce ofrece una experiencia sencilla y rápida para los usuarios que desean adquirir tecnología de forma cómoda.
 
@@ -32,6 +34,9 @@ MegaTech-Market/ │ ├── index.html # Página principal del e-commerce ├
 - ✅ Modal con formulario para envío de datos
 - ✅ Enlaces funcionales a redes sociales
 
+
+
+
 ## ✉️ Envío del formulario
 
 El formulario de compra está conectado con **FormSubmit**, un servicio externo que permite recibir mensajes por correo sin necesidad de un backend:
@@ -40,6 +45,3 @@ El formulario de compra está conectado con **FormSubmit**, un servicio externo 
 <form action="https://formsubmit.co/tu_correo@ejemplo.com" method="POST">
 
 
-Vista general del sitio:
-
-![Vista general](Assets/Capturas/vista-general.png)
