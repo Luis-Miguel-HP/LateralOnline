@@ -1,4 +1,6 @@
 
+// Funcion que llama al localstorage
+cargarlocalstorage()
 // Función para mostrar productos según la categoría seleccionada
 function mostrarCategoria(categoria) {
   const productos = document.querySelectorAll('.producto');
@@ -101,6 +103,7 @@ function vaciarProducto(){
   arregloCarrito = []
   limpiarHtml()
   precioTotalCero()
+  localStorage.clear()
 
 }
 
@@ -162,7 +165,7 @@ function escribirDatos(){
 
     // Muestra en el dom el total
     const totalElemento = document.querySelector("#total-carrito");
-    totalElemento.textContent = ` Total: $${total}`;
+    totalElemento.textContent = ` Total: $${total.toFixed(2)}`;
    
 
     row.innerHTML =
@@ -176,6 +179,7 @@ function escribirDatos(){
 
     `
     contenedorCarrito.appendChild(row)
+    localStorage.setItem("Producto", JSON.stringify(arregloCarrito));
   });
  
 }
@@ -186,3 +190,19 @@ function limpiarHtml(){
   contenedorCarrito.innerHTML =""
 }
 
+// Agregando local storage
+
+
+// Cargar el localstorage
+
+function cargarlocalstorage(){document.addEventListener("DOMContentLoaded",()=> {
+
+  const datosGuardados =localStorage.getItem("Producto");
+  if(datosGuardados){
+    arregloCarrito = JSON.parse(datosGuardados);
+    escribirDatos()
+  }
+
+})
+
+}
