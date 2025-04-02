@@ -22,7 +22,7 @@ MegaTech-Market/ │ ├── index.html # Página principal del e-commerce ├
 
 - **HTML5** para la estructura del sitio.
 - **CSS3** para estilos personalizados.
-- **JavaScript** para interactividad (manejo del carrito, formulario y filtros).
+- **JavaScript** para interactividad (manejo del carrito, formulario, localstorage y filtros).
 - **FormSubmit** para el envío del formulario de contacto sin backend.
 
 ## 📲 Funcionalidades destacadas
